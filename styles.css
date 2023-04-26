@@ -1,0 +1,416 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* 
+
+Recomendacion de uso de colores
+
+8ECAE6: Este color es un tono de azul claro que puede ser adecuado para un fondo de pantalla, 
+especialmente para un sitio web que busca dar una sensación de tranquilidad y serenidad. 
+También podría ser usado como un color de acento en un botón o ícono para atraer la atención del usuario.
+
+219EBC: Este tono de azul es más intenso y vibrante que el anterior, y podría ser una buena opción para 
+resaltar elementos importantes, como en botones de llamado a la acción o en títulos importantes. 
+También podría funcionar bien como color de fondo para un sitio web que busca dar una sensación de energía y entusiasmo.
+
+023047: Este tono de azul oscuro es ideal para un fondo que no distraiga de otros elementos de la página. 
+También puede ser utilizado en textos o botones que requieren un contraste fuerte y legible.
+
+FFB703: Este tono de amarillo cálido es excelente para llamar la atención del usuario en 
+elementos de la página que necesiten destacarse. 
+Sería una buena opción para botones de llamado a la acción o para destacar información importante.
+
+FB8500: Este tono de naranja vibrante podría ser utilizado para elementos que necesitan destacarse en la página, 
+como títulos o en botones de llamado a la acción. 
+También puede funcionar bien en un diseño de página web que busca dar una sensación de creatividad y energía.
+
+*/
+
+
+:root {
+    --skyBlue: #8ECAE6;
+    --blueGreen: #219EBC; 
+    --prussianBlue: #023047;
+    --selectiveYello: #FFB703;
+    --UtOrange: #FB8500;
+}
+
+html, body{
+    background: var(--skyBlue);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+/* Navbar */
+
+.navBar{
+    width: 100vw;
+    height: 60px;
+    background: var(--blueGreen);
+    transition: 300ms ease-in-out;
+    box-shadow: 0px 0px 10px var(--blueGreen);
+
+}
+
+.navBar__center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navBar__center h1{
+    font-size: 35px;
+    color: #caf0f8;
+}
+
+.logo{
+    width: 50px;
+    height: 60px;
+}
+
+.logo img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+.hamburguer{
+    width: 50px;
+    height: 60px;
+    padding: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.hamburguer img{
+    width: 100%;
+    height: 100%;
+    transition: transform 300ms ease-in-out;
+}
+
+.effect{
+    transition: 300ms ease-in-out;
+    filter: invert(0.7) sepia(1) hue-rotate(2deg) saturate(1000%);
+    transform: rotate(90deg);
+}
+
+.slider{
+    height: 250px;
+    transition: 300ms ease-in-out;
+}
+
+.menu{
+    width: 100%;
+    height: 75%;
+    text-align: center;
+    opacity: 0;
+    transition: 400ms;
+}
+
+.menu li{
+    width: 100%;
+    height: 25%;
+    line-height: 50px;
+    font-weight: bold;
+    color: var(--skyBlue);
+}
+
+.menu li:hover{
+    box-shadow: 0px 0px 10px var(--skyBlue) inset;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.displayBlock{
+    opacity: 1;
+    
+}
+
+/* Cards General */
+.card-container{
+    width: 300px;
+    height: 500px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 5px black;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.card-container h1{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 2px solid black;
+    background: linear-gradient(to left, var(--selectiveYello),var(--UtOrange));
+}
+
+
+/* Color Flipper */
+.grid-container{
+    width: 100%;
+    height: calc(100% - 50px);
+
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+}
+
+.grid-container div{
+    border: 1px solid black;
+}
+
+.box17{
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 4;
+    
+
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+    background: var(--prussianBlue);
+    color: white;
+    cursor: pointer;
+}
+
+/* Counter */
+.counter-container{
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+.counter{
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+    font-weight: bold;
+    background: black;
+    color: white;
+}
+
+.plusMinus{
+    width: 100%;
+    height: 30%;
+
+    display: flex;
+}
+
+.plusMinus button{
+    width: 50%;
+    height: 100%;
+    font-size: 60px;
+    background: var(--prussianBlue);
+    color: var(--UtOrange);
+    cursor: pointer;
+}
+
+/* Modal */
+.button-container{
+    width: 100%;
+    height: calc(100% - 50px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--prussianBlue);
+
+}
+
+.button-container button{
+    width: 80%;
+    height: 50%;
+    border-radius: 50%;
+    color: black;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+
+    background: linear-gradient(to bottom, var(--selectiveYello),var(--UtOrange));
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  
+  .modal-content {
+    background-color: #fefefe; 
+    margin: 15% auto; 
+    padding: 20px;
+    border: 5px solid var(--UtOrange);
+    width: 80%;
+    margin-top: 200px;
+
+    position: relative;
+  }
+  
+  
+  .close {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    color: #aaaaaa;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* Timer */
+.timer{
+    height: 300px;
+    margin-bottom: 500px;
+} 
+
+.timerGrid-container{
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+.titleBox{
+    background: black;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--blueGreen);
+    line-height: 60px;
+    text-align: center;
+}
+
+.numeros{
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--UtOrange);
+    line-height: 60px;
+    text-align: center;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 80px;
+    background: var(--blueGreen);
+    box-shadow: 0px 0px 10px var(--blueGreen);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer p a{
+    text-decoration: none;
+    color: var(--prussianBlue);
+}
+
+
+
+/* Responsive */
+
+@media only screen and (min-width: 700px){
+    .card-container{
+        width: 400px;
+        height: 500px;
+        font-size: 20px;
+    }
+
+    .button-container button{
+        border-radius: 5px;
+    }
+
+    .timer{
+        height: 300px;
+        font-size: 20px;
+    }
+
+    .titleBox{
+        font-size: 20px;
+    }
+
+    .numeros{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 1440px){
+    .grid-cards-container{
+        display: grid;
+        grid-template: 1fr 1fr / repeat(3, 1fr);
+        max-width: 1350px;
+        height: 1000px;
+        margin: auto;
+    }
+
+    #timer{
+        grid-column: 1 / span 3;
+        width: 96%;
+    }
+
+    .titleBox{
+        font-size: 25px;
+    }
+
+    .numeros{
+        font-size: 25px;
+    }
+
+    .card-container{
+        margin-top: 50px;
+    }
+
+    .hamburguer{
+        display: none;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .navBar__center{
+        height: 100%;
+    }
+}

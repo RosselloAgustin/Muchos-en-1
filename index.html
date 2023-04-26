@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Muchos en 1</title>
+</head>
+<body>
+    
+
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navBar">
+            <div class="navBar__center">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <h1>¡Bienvenido!</h1>
+                <div class="hamburguer ">
+                    <img class="img" src="img/iconHamburguer.png" alt="">
+                </div>
+            </div>
+
+            <ul class="menu">
+                <a href="#colorFlipper"><li>Color Flipper</li></a>
+                <a href="#counter"><li>Counter</li></a>
+                <a href="#modal"><li>Modal</li></a>
+                <a href="#timer"><li>Timer</li></a>
+                
+                
+            </ul>
+
+
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <section class="grid-cards-container">
+
+            <!-- Color Flipper -->
+            <section id="colorFlipper" class="card-container">
+                
+                <h1>Color Flipper</h1>
+
+                <div class="grid-container">
+                    <div class="box1"></div>
+                    <div class="box2"></div>
+                    <div class="box3"></div>
+                    <div class="box4"></div>
+                    <div class="box5"></div>
+                    <div class="box6"></div>
+                    <div class="box7"></div>
+                    <div class="box8"></div>
+                    <div class="box9"></div>
+                    <div class="box10"></div>
+                    <div class="box11"></div>
+                    <div class="box12"></div>
+                    <div class="box13"></div>
+                    <div class="box14"></div>
+                    <div class="box15"></div>
+                    <div class="box16"></div>
+
+                    <button class="box17">PUSH</button>
+                </div>
+            </section>
+
+            <!-- Counter -->
+            <section id="counter" class="card-container">
+                
+                <h1>Counter</h1>
+                <div class="counter-container">
+                    <div class="counter">
+                        
+                    </div>
+
+                    <div class="plusMinus">
+                        <button class="minus"> - </button>
+                        <button class="plus"> + </button>
+                        
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Modal -->
+            <section id="modal" class="card-container">
+                
+                <h1>Modal</h1>
+
+                <div class="button-container">
+                    <button class="buttonModal">PUSH</button>
+                </div>
+
+
+                <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>
+                        Esta es una ventana emergente de la sección "Modal". Para poder seguir navegando y utilizar
+                        las distintas funcionalidades de esta pagina, es necesario cerrar esta ventana.
+                    </p>
+                </div>
+                </div>
+                
+            </section>
+
+
+            <!-- Timer -->
+            <section id="timer" class="card-container timer">
+                
+                <h1>Timer</h1> <!-- Faltan X dias x horas, etc para mi cumpleaños xD -->
+
+                <div class="timerGrid-container">
+                    <div class="titleBox">Fecha de Hoy</div>
+                    <div> <p class="numeros" id="fecha-actual"></p> </div>
+                    <div class="titleBox">Hora Actual</div>
+                    <div> <p class="numeros" id="hora-actual"></p> </div>
+                    <div class="titleBox">Mi Cumpleaños</div>
+                    <div> <p class="numeros" id="temporizador"></p> </div>
+                    <div class="titleBox">Tiempo en Página</div>
+                    <div> <p class="numeros" id="cronometro">0 segundos</p> </div>
+                </div>
+            </section>
+            
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <p>¡No olvides seguirme en 
+            <a href="https://www.linkedin.com/in/agustin-rossello-39898b26b/" target="_blank">Linkedin!</a>
+        </p>
+    </footer>
+
+    
+    <script src="./app.js"></script>
+</body>
+</html>
